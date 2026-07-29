@@ -2,7 +2,7 @@ import os
 
 LINES = [
     "Sean",
-    "Go / Docker / Powershell",
+    "Go / Docker / PowerShell",
     "Learning new languages by building with AI",
     "Currently working on Forgejo Encrypt Mirror",
 ]
