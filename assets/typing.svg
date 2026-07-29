@@ -10,7 +10,7 @@
 <animate attributeName="width" keyTimes="0.00000;0.11582;0.20257;0.28716;0.33921;1.00000" values="0;0;316.8;316.8;0;0" dur="15.369s" begin="0s" repeatCount="indefinite" calcMode="linear" />
 </rect>
 </clipPath>
-<text x="2" y="27.2" clip-path="url(#clip1)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Go / Docker / Powershell</text>
+<text x="2" y="27.2" clip-path="url(#clip1)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Go / Docker / PowerShell</text>
 <clipPath id="clip2">
 <rect x="0" y="0" width="0" height="40">
 <animate attributeName="width" keyTimes="0.00000;0.33921;0.49104;0.57562;0.66671;1.00000" values="0;0;554.4;554.4;0;0" dur="15.369s" begin="0s" repeatCount="indefinite" calcMode="linear" />
