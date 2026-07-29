@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40" viewBox="0 0 600 40">
+<clipPath id="clip0">
+<rect x="0" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.01952;0.10411;0.11582;1.00000" values="0;52.8;52.8;0;0" dur="15.369s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+</rect>
+</clipPath>
+<text x="2" y="27.2" clip-path="url(#clip0)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Sean</text>
+<clipPath id="clip1">
+<rect x="0" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.11582;0.20257;0.28716;0.33921;1.00000" values="0;0;316.8;316.8;0;0" dur="15.369s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+</rect>
+</clipPath>
+<text x="2" y="27.2" clip-path="url(#clip1)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Go / Docker / Powershell</text>
+<clipPath id="clip2">
+<rect x="0" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.33921;0.49104;0.57562;0.66671;1.00000" values="0;0;554.4;554.4;0;0" dur="15.369s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+</rect>
+</clipPath>
+<text x="2" y="27.2" clip-path="url(#clip2)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Learning new languages by building with AI</text>
+<clipPath id="clip3">
+<rect x="0" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.66671;0.82215;0.90674;1.00000" values="0;0;567.6;567.6;0" dur="15.369s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+</rect>
+</clipPath>
+<text x="2" y="27.2" clip-path="url(#clip3)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Currently working on Forgejo Encrypt Mirror</text>
+</svg>
