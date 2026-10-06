@@ -4,7 +4,6 @@ LINES = [
     "Sean",
     "Go / Docker / PowerShell",
     "Learning new languages by building with AI",
-    "Currently working on Forgejo Encrypt Mirror",
 ]
 
 FONT_SIZE = 22
