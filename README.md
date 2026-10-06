@@ -18,7 +18,6 @@
 
 ### About
 
-- Building [Forgejo Encrypt Mirror](https://github.com/seanh1995/forgejo-encrypt-mirror) — an encrypted Forgejo-to-GitHub mirroring service written in Go
 - I lean on AI (Claude, Copilot) to speed up learning new languages and patterns, using real projects instead of tutorials
 - HTML/CSS is hand-written, no AI required
 - Currently leveling up in Go and PowerShell 7 — I like learning by building rather than reading
