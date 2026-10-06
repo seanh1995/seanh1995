@@ -18,7 +18,7 @@
 
 ### About
 
-- I contribute to open source on GitHub, mainly the Chris Titus Tech projects
+- I contribute to open source on GitHub, mainly to Chris Titus Tech projects
 - I lean on AI (Claude, Copilot) to speed up learning new languages and patterns, using real projects instead of tutorials
 - HTML/CSS is hand-written, no AI required
 - Currently leveling up in Go and PowerShell 7 — I like learning by building rather than reading
