@@ -1,20 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40" viewBox="0 0 600 40">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40" viewBox="0 0 600 40" role="img" aria-label="Hi, I'm Sean | Open source contributor: winutil &amp; linutil | Python / Java / SQL / Docker | HTML and CSS, written by hand | Always building something new">
+<style>.t,.c{fill:#58A6FF}@media (prefers-color-scheme:light){.t,.c{fill:#0969DA}}</style>
 <clipPath id="clip0">
-<rect x="0" y="0" width="0" height="40">
-<animate attributeName="width" keyTimes="0.00000;0.02928;0.15615;0.17372;1.00000" values="0;52.8;52.8;0;0" dur="10.247s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+<rect x="2" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.03273;0.10255;0.12000;1.00000" values="0;158.4;158.4;0;0" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
 </rect>
 </clipPath>
-<text x="2" y="27.2" clip-path="url(#clip0)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Sean</text>
+<text class="t" x="2" y="27.2" clip-path="url(#clip0)" textLength="158.4" lengthAdjust="spacing" font-family="Consolas, Menlo, monospace" font-size="22">Hi, I'm Sean</text>
+<g opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.00000;0.12000" values="0;1;0" dur="22.917s" repeatCount="indefinite" />
+<rect class="c" x="15.2" y="8.0" width="2" height="24.0">
+<animate attributeName="x" keyTimes="0.00000;0.03273;0.10255;0.12000;1.00000" values="15.2;173.6;173.6;15.2;15.2" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.6s" repeatCount="indefinite" calcMode="discrete" />
+</rect>
+</g>
 <clipPath id="clip1">
-<rect x="0" y="0" width="0" height="40">
-<animate attributeName="width" keyTimes="0.00000;0.17372;0.30384;0.43071;0.50878;1.00000" values="0;0;316.8;316.8;0;0" dur="10.247s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+<rect x="2" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.13309;0.24764;0.31745;0.37855;1.00000" values="0;0;554.4;554.4;0;0" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
 </rect>
 </clipPath>
-<text x="2" y="27.2" clip-path="url(#clip1)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Go / Docker / PowerShell</text>
+<text class="t" x="2" y="27.2" clip-path="url(#clip1)" textLength="554.4" lengthAdjust="spacing" font-family="Consolas, Menlo, monospace" font-size="22">Open source contributor: winutil &amp; linutil</text>
+<g opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.13309;0.37855" values="0;1;0" dur="22.917s" repeatCount="indefinite" />
+<rect class="c" x="15.2" y="8.0" width="2" height="24.0">
+<animate attributeName="x" keyTimes="0.00000;0.13309;0.24764;0.31745;0.37855;1.00000" values="15.2;15.2;569.6;569.6;15.2;15.2" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.6s" repeatCount="indefinite" calcMode="discrete" />
+</rect>
+</g>
 <clipPath id="clip2">
-<rect x="0" y="0" width="0" height="40">
-<animate attributeName="width" keyTimes="0.00000;0.50878;0.73650;0.86337;1.00000" values="0;0;554.4;554.4;0" dur="10.247s" begin="0s" repeatCount="indefinite" calcMode="linear" />
+<rect x="2" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.39164;0.46800;0.53782;0.57855;1.00000" values="0;0;369.6;369.6;0;0" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
 </rect>
 </clipPath>
-<text x="2" y="27.2" clip-path="url(#clip2)" font-family="Consolas, Menlo, monospace" font-size="22" fill="#58A6FF">Learning new languages by building with AI</text>
+<text class="t" x="2" y="27.2" clip-path="url(#clip2)" textLength="369.6" lengthAdjust="spacing" font-family="Consolas, Menlo, monospace" font-size="22">Python / Java / SQL / Docker</text>
+<g opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.39164;0.57855" values="0;1;0" dur="22.917s" repeatCount="indefinite" />
+<rect class="c" x="15.2" y="8.0" width="2" height="24.0">
+<animate attributeName="x" keyTimes="0.00000;0.39164;0.46800;0.53782;0.57855;1.00000" values="15.2;15.2;384.8;384.8;15.2;15.2" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.6s" repeatCount="indefinite" calcMode="discrete" />
+</rect>
+</g>
+<clipPath id="clip3">
+<rect x="2" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.59164;0.67073;0.74055;0.78273;1.00000" values="0;0;382.8;382.8;0;0" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+</rect>
+</clipPath>
+<text class="t" x="2" y="27.2" clip-path="url(#clip3)" textLength="382.8" lengthAdjust="spacing" font-family="Consolas, Menlo, monospace" font-size="22">HTML and CSS, written by hand</text>
+<g opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.59164;0.78273" values="0;1;0" dur="22.917s" repeatCount="indefinite" />
+<rect class="c" x="15.2" y="8.0" width="2" height="24.0">
+<animate attributeName="x" keyTimes="0.00000;0.59164;0.67073;0.74055;0.78273;1.00000" values="15.2;15.2;398.0;398.0;15.2;15.2" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.6s" repeatCount="indefinite" calcMode="discrete" />
+</rect>
+</g>
+<clipPath id="clip4">
+<rect x="2" y="0" width="0" height="40">
+<animate attributeName="width" keyTimes="0.00000;0.79582;0.87491;0.94473;0.98691;1.00000" values="0;0;382.8;382.8;0;0" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+</rect>
+</clipPath>
+<text class="t" x="2" y="27.2" clip-path="url(#clip4)" textLength="382.8" lengthAdjust="spacing" font-family="Consolas, Menlo, monospace" font-size="22">Always building something new</text>
+<g opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.79582;0.98691" values="0;1;0" dur="22.917s" repeatCount="indefinite" />
+<rect class="c" x="15.2" y="8.0" width="2" height="24.0">
+<animate attributeName="x" keyTimes="0.00000;0.79582;0.87491;0.94473;0.98691;1.00000" values="15.2;15.2;398.0;398.0;15.2;15.2" dur="22.917s" repeatCount="indefinite" calcMode="linear" />
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.6s" repeatCount="indefinite" calcMode="discrete" />
+</rect>
+</g>
 </svg>
