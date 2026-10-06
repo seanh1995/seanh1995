@@ -32,7 +32,6 @@
 | [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil) | App categorization, issue templates, title screen image, containerized docs tooling |
 | [ChrisTitusTech/website](https://github.com/ChrisTitusTech/website) | Homepage layout, header search, pagination, article table of contents, clickable cards, social icons and link previews, mobile navigation |
 | [ChrisTitusTech/linutil](https://github.com/ChrisTitusTech/linutil) | New linutil website, website edits, docs, theme version update, funding file |
-| [CodingWonders/MicroWin](https://github.com/CodingWonders/MicroWin) | Documentation for MicroWin |
 
 [All my pull requests](https://github.com/pulls?q=is%3Apr+author%3Aseanh1995)
 
