@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/seanh1995/seanh1995/main/assets/typing.svg" alt="Typing SVG" />
+<img src="https://raw.githubusercontent.com/seanh1995/seanh1995/main/assets/typing.svg?v=2" alt="Typing SVG" />
 
 </div>
 
