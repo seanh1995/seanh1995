@@ -16,6 +16,16 @@ jobs:
       - name: Checkout
         uses: https://code.forgejo.org/actions/checkout@v4
 
+      # TEMPORARY: diagnose the 401 from GitHub. Remove once snake works.
+      - name: Check GitHub token
+        env:
+          TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          echo "METRICS_TOKEN: length ${#TOKEN}, starts with '${TOKEN:0:4}'"
+          echo "Runner-provided GITHUB_TOKEN: ${GITHUB_TOKEN:+set, length ${#GITHUB_TOKEN}}"
+          curl -s -o /dev/null -w "api.github.com/user with METRICS_TOKEN -> HTTP %{http_code}\n" \
+            -H "Authorization: bearer $TOKEN" https://api.github.com/user
+
       - name: Generate snake animation
         uses: https://github.com/Platane/snk/svg-only@v3
         env:
