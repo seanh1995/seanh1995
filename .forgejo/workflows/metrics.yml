@@ -38,8 +38,11 @@ jobs:
           INPUT_PLUGIN_LANGUAGES_LIMIT: "8"
           INPUT_PLUGIN_ISOCALENDAR: "yes"
           INPUT_PLUGIN_ISOCALENDAR_DURATION: full-year
+        # GITHUB_ACTIONS=false makes metrics read INPUT_* directly and use its
+        # own defaults for unset inputs; with Forgejo's GITHUB_ACTIONS=true it
+        # treats every unset input as "", enabling mocked mode and all plugins.
         run: |
-          node source/app/action/index.mjs
+          GITHUB_ACTIONS=false node source/app/action/index.mjs
           cp /renders/github-metrics.svg "$GITHUB_WORKSPACE/assets/github-metrics.svg"
 
       - name: Commit generated assets
