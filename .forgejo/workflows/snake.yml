@@ -1,0 +1,39 @@
+name: Snake animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+jobs:
+  generate:
+    runs-on: docker
+    container:
+      image: node:24-bookworm
+    steps:
+      - name: Checkout
+        uses: https://code.forgejo.org/actions/checkout@v4
+
+      - name: Generate snake animation
+        uses: https://github.com/Platane/snk/svg-only@v3
+        env:
+          # snk reads GITHUB_TOKEN before its input; on Forgejo that would be
+          # the Forgejo token, so point it at a GitHub PAT instead.
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        with:
+          github_user_name: seanh1995
+          outputs: |
+            assets/github-contribution-grid-snake.svg
+            assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "forgejo-actions[bot]"
+          git config user.email "forgejo-actions[bot]@noreply.code.seantestenv.co.uk"
+          git add assets
+          git diff --cached --quiet && exit 0
+          git commit -m "Regenerate snake animation"
+          git pull --rebase origin main
+          git push
