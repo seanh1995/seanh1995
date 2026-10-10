@@ -1,0 +1,53 @@
+name: Metrics embed
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+jobs:
+  metrics:
+    runs-on: docker
+    # Run metrics inside its own image rather than as an action, so it renders
+    # to /renders and the commit below goes to this repo, not to GitHub.
+    container:
+      image: ghcr.io/lowlighter/metrics:latest
+    steps:
+      - name: Checkout
+        uses: https://code.forgejo.org/actions/checkout@v4
+
+      - name: Generate metrics
+        working-directory: /metrics
+        env:
+          # Forgejo sets these to itself; metrics needs the real GitHub API.
+          GITHUB_API_URL: https://api.github.com
+          GITHUB_GRAPHQL_URL: https://api.github.com/graphql
+          GITHUB_REPOSITORY: seanh1995/seanh1995
+          INPUT_GITHUB_API_REST: https://api.github.com
+          INPUT_GITHUB_API_GRAPHQL: https://api.github.com
+          INPUT_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          INPUT_USER: seanh1995
+          INPUT_OUTPUT_ACTION: none
+          INPUT_FILENAME: github-metrics.svg
+          INPUT_BASE: header, activity, community, repositories
+          INPUT_PLUGIN_LANGUAGES: "yes"
+          INPUT_PLUGIN_LANGUAGES_ANALYSIS_TIMEOUT: "60"
+          INPUT_PLUGIN_LANGUAGES_CATEGORIES: markup, programming
+          INPUT_PLUGIN_LANGUAGES_LIMIT: "8"
+          INPUT_PLUGIN_ISOCALENDAR: "yes"
+          INPUT_PLUGIN_ISOCALENDAR_DURATION: full-year
+        run: |
+          node source/app/action/index.mjs
+          cp /renders/github-metrics.svg "$GITHUB_WORKSPACE/assets/github-metrics.svg"
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "forgejo-actions[bot]"
+          git config user.email "forgejo-actions[bot]@noreply.code.seantestenv.co.uk"
+          git add assets
+          git diff --cached --quiet && exit 0
+          git commit -m "Update assets/github-metrics.svg"
+          git pull --rebase origin main
+          git push
