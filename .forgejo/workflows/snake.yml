@@ -16,27 +16,20 @@ jobs:
       - name: Checkout
         uses: https://code.forgejo.org/actions/checkout@v4
 
-      # TEMPORARY: diagnose the 401 from GitHub. Remove once snake works.
-      - name: Check GitHub token
-        env:
-          TOKEN: ${{ secrets.METRICS_TOKEN }}
-        run: |
-          echo "METRICS_TOKEN: length ${#TOKEN}, starts with '${TOKEN:0:4}'"
-          echo "Runner-provided GITHUB_TOKEN: ${GITHUB_TOKEN:+set, length ${#GITHUB_TOKEN}}"
-          curl -s -o /dev/null -w "api.github.com/user with METRICS_TOKEN -> HTTP %{http_code}\n" \
-            -H "Authorization: bearer $TOKEN" https://api.github.com/user
-
+      # Run snk's bundled action script directly rather than via `uses:`. The
+      # Forgejo runner injects its own GITHUB_TOKEN into action steps, which
+      # snk reads before its token input and which GitHub rejects; setting it
+      # inline on the command keeps the GitHub PAT in place.
       - name: Generate snake animation
-        uses: https://github.com/Platane/snk/svg-only@v3
         env:
-          # snk reads GITHUB_TOKEN before its input; on Forgejo that would be
-          # the Forgejo token, so point it at a GitHub PAT instead.
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-        with:
-          github_user_name: seanh1995
-          outputs: |
+          SNK_GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          INPUT_GITHUB_USER_NAME: seanh1995
+          INPUT_OUTPUTS: |
             assets/github-contribution-grid-snake.svg
             assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+        run: |
+          git clone --quiet --depth 1 --branch v3 https://github.com/Platane/snk /tmp/snk
+          GITHUB_TOKEN="$SNK_GITHUB_TOKEN" node /tmp/snk/svg-only/dist/index.js
 
       - name: Commit generated assets
         run: |
