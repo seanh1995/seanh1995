@@ -1,0 +1,31 @@
+name: Assets
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate_typing_svg.py"
+      - ".forgejo/workflows/assets.yml"
+
+jobs:
+  build-assets:
+    runs-on: docker
+    container:
+      image: node:24-bookworm
+    steps:
+      - name: Checkout
+        uses: https://code.forgejo.org/actions/checkout@v4
+
+      - name: Generate typing SVG
+        run: python3 scripts/generate_typing_svg.py
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "forgejo-actions[bot]"
+          git config user.email "forgejo-actions[bot]@noreply.code.seantestenv.co.uk"
+          git add assets
+          git diff --cached --quiet && exit 0
+          git commit -m "Regenerate typing SVG"
+          git pull --rebase origin main
+          git push
